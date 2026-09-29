@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const tareas = ['Crear el proyecto', 'Añadir páginas', 'Publicar el sitio'];
+---
+
+<Layout title="Inicio | Prueba Asisteme">
+  <h1>¡Hola desde Astro! 🚀</h1>
+  <p>Este es un pequeño proyecto de ejemplo construido con Astro.</p>
+
+  <h2>Próximos pasos</h2>
+  <ul>
+    {tareas.map((tarea) => <li>{tarea}</li>)}
+  </ul>
+</Layout>
