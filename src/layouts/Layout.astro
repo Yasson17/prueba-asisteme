@@ -1,9 +1,13 @@
 ---
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = 'A small Astro project used to try out the pull request workflow.',
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -11,6 +15,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
     <title>{title}</title>
   </head>
   <body>
